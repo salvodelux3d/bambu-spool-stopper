@@ -1,8 +1,10 @@
 /*************************************************
  * Bambu Spool Stopper
+ * Version: 1.3.0
  * Author: SalvoDelux3D
  * License: CC BY-NC-SA 4.0
  *************************************************/
+
 
 //////////////////////
 // Global settings  //
