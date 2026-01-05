@@ -34,12 +34,26 @@ spool_stopper();
 //////////////////////
 
 module spool_stopper() {
-    rounded_plate(
-        stopper_length,
-        stopper_width,
-        stopper_height,
-        corner_radius
-    );
+    difference() {
+        rounded_plate(
+            stopper_length,
+            stopper_width,
+            stopper_height,
+            corner_radius
+        );
+
+        // Central relief cut
+        translate([
+            tolerance,
+            tolerance,
+            -0.1
+        ])
+        cube([
+            stopper_length - 2*tolerance,
+            stopper_width  - 2*tolerance,
+            stopper_height
+        ]);
+    }
 }
 
 //////////////////////
@@ -52,3 +66,4 @@ module rounded_plate(l, w, h, r) {
         cylinder(r = r, h = 0.01);
     }
 }
+
