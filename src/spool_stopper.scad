@@ -35,6 +35,7 @@ spool_stopper();
 
 module spool_stopper() {
     difference() {
+        // Main body
         rounded_plate(
             stopper_length,
             stopper_width,
@@ -53,17 +54,20 @@ module spool_stopper() {
             stopper_width  - 2*tolerance,
             stopper_height
         ]);
+
+        // Chamfer on spool contact side
+        translate([
+            stopper_length - 5,
+            -1,
+            -1
+        ])
+        rotate([0, 45, 0])
+        cube([
+            10,
+            stopper_width + 2,
+            stopper_height + 2
+        ]);
     }
 }
 
-//////////////////////
-// Utility modules  //
-//////////////////////
-
-module rounded_plate(l, w, h, r) {
-    minkowski() {
-        cube([l - 2*r, w - 2*r, h], center = false);
-        cylinder(r = r, h = 0.01);
-    }
-}
 
