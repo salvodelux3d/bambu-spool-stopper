@@ -6,6 +6,12 @@ Designed for Bambu Lab spools but compatible with most standard 1kg filament spo
 
 ---
 
+**Version:** 1.1  
+**Status:** Stable – MakerWorld release  
+**Workflow:** SketchUp → nanoCAD → OpenSCAD → Bambu Studio → MakerWorld
+
+---
+
 ## Features
 - Compact functional design
 - Drawer-friendly shape
@@ -23,15 +29,46 @@ Designed for Bambu Lab spools but compatible with most standard 1kg filament spo
 
 ---
 
+## For MakerWorld users
+If you are here to **print the model**:
+
+✅ Use the **STL files** in the `/export` folder  
+✅ Files are tested and ready to print  
+❌ No CAD software required
+
+---
+
+## Project Workflow
+This project follows a **progressive design workflow**:
+
+1. **SketchUp** – fast concept and shape definition  
+2. **nanoCAD** – dimensional checks and technical refinements  
+3. **OpenSCAD** – parametric and reproducible model  
+4. **Bambu Studio** – slicing and print tests  
+5. **MakerWorld** – final publication
+
+The final reference for printing is always the STL file.
+
+---
+
 ## Files Structure
-- `/src` → OpenSCAD source files
-- `/stl` → Ready-to-print STL files
-- `/docs/images` → Images and renders
+/export → Final STL / STEP files (official print source)
+/openscad → Parametric OpenSCAD source
+/sketchup → Initial concept and drafts
+/nanocad → Technical drawings and 2D profiles
+/images → Renders and print photos
 
 ---
 
 ## Customization
-This model can be easily modified using OpenSCAD to adapt dimensions and tolerances.
+The parametric version is available in OpenSCAD.
+
+Advanced users can:
+- adjust dimensions
+- change tolerances
+- create variants
+
+If you modify the source files, always export a new STL and test the print.
 
 ---
 
@@ -42,3 +79,4 @@ This project is licensed under **CC BY-NC-SA 4.0**
 
 ## Author
 **SalvoDelux3D**
+
